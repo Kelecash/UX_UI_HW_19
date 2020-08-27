@@ -6,6 +6,7 @@
     <title>Kelly's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="icon" type="image/png" href="images/Logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -33,7 +34,7 @@
     </nav>
 <!--END MOBILE NAV!!!-->
 
-    <section id="hero-wrapper">
+    <section id="hero-container">
         <div id="hero-image">
         </div>
         <div id="hero-header">
@@ -45,18 +46,21 @@
             <br>
             <div class="socialcontainer">
                 <a href="https://www.instagram.com/kerly_q/"><img class="logo" src="images/Instagram-Mobile.png"></a>
-                <a href="https://twitter.com/kelecash"><img class="logo" src="Images/Twitter-Mobile.png"></a>
-                <a href="https://www.linkedin.com/in/kelly-cashin/"><img class="logo" src="Images/Linkedin-Mobile.png"></a>
+                <a href="https://twitter.com/kelecash"><img class="logo" src="images/Twitter-Mobile.png"></a>
+                <a href="https://www.linkedin.com/in/kelly-cashin/"><img class="logo" src="images/Linkedin-Mobile.png"></a>
             </div>
         </div>
         <div id="hero-right">
             <h2>I am a <b>UX designer</b>. I developed a passion for human centered design after working in the breakneck ATL tech start-up scene~</h2>
             <p><b>What motivates me:</b> I always want better for people!</p> 
-            <p><b>What I love:</b> Orchids, spilling paint on things, experimental music, cat pictures, 
-                Tetris (play me), finding alternative routes to the Beltline. </p>
+            <p><b>What I love:</b> <u id="orchids">Orchids</u>, <u id="paint">spilling paint</u> on things, experimental music, <u id="cat">cat pictures</u>, 
+                Tetris <a href="https://jstris.jezevec10.com/u/zweiga">(play me)</a>, finding alternative routes to the Beltline. </p>
         </div>
-        <div class="hover-reveal">
-            <div id="hover-orchid"></div>
+        <div class="desktop" id="orchid-reveal">
+        </div>
+        <div class="desktop" id="paint-reveal">
+        </div>
+        <div class="desktop" id="cat-reveal">
         </div>
     </section>
     <section id="about">
@@ -110,4 +114,5 @@
         </div>
     </footer>
 </body>
+<script src="js/index.js"></script>
 </html>
