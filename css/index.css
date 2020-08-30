@@ -6,6 +6,11 @@
     display: none;
 }
 
+body a{
+    color: #AB888D;
+    font-weight: bold;
+}
+
 nav{
     display: flex;
     flex-direction: row;
@@ -19,6 +24,7 @@ nav{
 nav a{
     text-decoration-line: none;
     color: #694556;
+    font-weight: normal;
 }
 
 body{
@@ -29,11 +35,6 @@ body{
 body u{
     text-decoration-style: dashed;
     text-decoration-color: #AB888D;
-}
-
-body a{
-    color: #AB888D;
-    font-weight: bold;
 }
 
 h1{
@@ -85,6 +86,26 @@ body b{
     grid-template-rows: 125px 1fr 1fr;
 }
 
+#arrow{
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+    text-align: center;
+    height: fit-content;
+    align-self: center;
+    z-index: -2;
+    margin-top: 65px;
+}
+
+.bounce {
+    -webkit-animation: bounce 6s infinite ease-in-out;
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 60%, 100%  { -webkit-transform: translateY(0); }
+    40%  { -webkit-transform: translateY(-20px); }
+	80% { -webkit-transform: translateY(-10px); }
+}
+
 #hero-image{
     background-image: url(../images/hero.png);
     background-size: contain;
@@ -92,7 +113,7 @@ body b{
     background-position: left;
     grid-column: 1 / span 3;
     grid-row: 1 / span 3;
-    z-index: -2;
+    z-index: -3;
 }
 
 #hero-header{
@@ -120,7 +141,8 @@ body b{
     margin-right: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    z-index: -2;
 }
 
 #orchid-reveal{
@@ -192,6 +214,7 @@ body b{
 
 #aboutheader{
     grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
 }
 
 #aboutcontainer{
@@ -201,6 +224,18 @@ body b{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     height: fit-content;
     background-color: white;
+}
+
+.texture{
+    z-index: -10;
+    padding-top: 10%;
+    max-height: 40vh;
+}
+
+#texture1{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 2;
+    text-align: end;
 }
 
 #skills{
@@ -232,6 +267,7 @@ body b{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     background-color: white;
     margin-right: 15px;
+    margin-left: 15px;
     grid-row: 2 / span 1;
     height: 250px;
     text-align: center;
@@ -302,6 +338,32 @@ footer{
     grid-row: 3 / span 1;
 }
 
+#learning-grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+}
+
+#learning-explainer{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+#learning-header{
+    grid-column: 3 / span 2;
+}
+
+.learning-box{
+    grid-area: box;
+    width: 15vw;
+    height: 15vw;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
 /* Smaller Screen + Mobile CSS */
 
 @media only screen and (max-width: 700px){
@@ -354,13 +416,14 @@ footer{
         grid-row-end: 3;
         background-size: cover;
         background-position: center;
-        z-index: -1;
+        z-index: -10;
     }
 
     #hero-header{
         grid-column: 2 / span 1;
         grid-row: 1 / span 1;
         height: fit-content;
+        align-self: right;
     }
 
     #hero-left{
@@ -374,6 +437,7 @@ footer{
 
     .superscript{
         align-items: flex-start;
+        z-index: -9;
     }
 
     #hero-right{

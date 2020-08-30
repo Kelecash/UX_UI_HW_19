@@ -26,3 +26,7 @@ $(document).ready(function(){
         $("#cat-reveal").css("opacity","0%")
     });
 });
+
+$(window).scroll(function(){
+    $(".bounce").css("opacity", 1 - $(window).scrollTop() / 250); 
+  });
