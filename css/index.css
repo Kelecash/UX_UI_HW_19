@@ -361,7 +361,35 @@ footer{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     margin-left: 15px;
     margin-bottom: 15px;
-    padding: 15px;
+}
+
+#text-container{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    padding: 20px 50px 20px;
+    height: fit-content;
+    align-self: left;
+}
+
+#study{
+    align-content: center;
+}
+
+#img-container{
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+#study-img{
+    max-width: 70%;
+    object-fit: contain;
+    object-position: center;
+}
+
+#study{
+    margin: 15px 0px 0px 15px;
 }
 
 /* Smaller Screen + Mobile CSS */
